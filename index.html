@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shashank Singh | Senior DevOps &amp; DevSecOps Engineer</title>
+<meta name="description" content="Portfolio of Shashank Singh - Senior DevOps / DevSecOps Engineer with 6+ years of DevOps experience (14+ years total). Azure, Terraform, Kubernetes (AKS), GitHub Actions, Azure DevOps, DevSecOps.">
+<meta name="keywords" content="Shashank Singh, Senior DevOps Engineer, DevSecOps, Azure, Terraform, AKS, Kubernetes, GitHub Actions, Azure DevOps, Mavenir, Delhi">
+<meta property="og:title" content="Shashank Singh | Senior DevOps &amp; DevSecOps Engineer">
+<meta property="og:description" content="Secure, automated Azure infrastructure with Terraform, AKS and DevSecOps pipeline gates.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --bg:#0b1020; --bg2:#10172e; --card:rgba(255,255,255,.04); --border:rgba(255,255,255,.09);
+  --text:#e6ebf5; --muted:#9aa6c0; --accent:#00b4ff; --accent2:#7c5cff; --ok:#22c55e; --warn:#f59e0b;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;
+  background-image:radial-gradient(900px 500px at 85% -10%,rgba(124,92,255,.18),transparent),radial-gradient(800px 500px at -10% 10%,rgba(0,180,255,.14),transparent);
+  background-attachment:fixed}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+.eyebrow{color:var(--accent);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin:6px 0 10px;line-height:1.2}
+.sub{color:var(--muted);max-width:720px;margin-bottom:34px}
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,16,32,.72);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:.02em;color:var(--text)}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:22px;align-items:center}
+.links a{color:var(--muted);font-size:.92rem}
+.links a:hover{color:var(--text);text-decoration:none}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;font-size:.92rem;border:1px solid var(--border);color:var(--text);background:var(--card);cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-1px);text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#fff}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text);border-radius:8px;padding:6px 10px;font-size:1.1rem;cursor:pointer}
+/* hero */
+#hero{padding-top:140px}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;font-size:.82rem;padding:6px 12px;border-radius:99px;border:1px solid var(--border);background:var(--card);color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.12;margin:18px 0 14px;letter-spacing:-.02em}
+h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:1.15rem;color:var(--accent);font-weight:600;min-height:1.8em}
+.lead{color:var(--muted);margin:14px 0 24px;max-width:640px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.contact-mini{display:flex;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:.9rem}
+.profile{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;text-align:center}
+.avatar{width:112px;height:112px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-size:2.4rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 10px 40px rgba(0,180,255,.25)}
+.profile h3{font-size:1.2rem}
+.profile .tag{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.facts{text-align:left;font-size:.88rem;border-top:1px solid var(--border);padding-top:14px}
+.facts div{display:flex;justify-content:space-between;gap:10px;padding:5px 0;color:var(--muted)}
+.facts b{color:var(--text);font-weight:600;text-align:right}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:54px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.stat .n{font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .l{color:var(--muted);font-size:.85rem}
+/* about */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:34px}
+.about-grid p{color:var(--muted);margin-bottom:14px}
+.about-grid p b{color:var(--text)}
+.pillars{display:grid;gap:12px}
+.pillar{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.pillar b{display:block;margin-bottom:2px}
+.pillar span{color:var(--muted);font-size:.88rem}
+/* terminal */
+.term{background:#070b17;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.term-bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#0c1226;border-bottom:1px solid var(--border);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;color:var(--muted)}
+.term-bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.stages{display:flex;flex-wrap:wrap;gap:8px;padding:14px;border-bottom:1px solid var(--border)}
+.stage{font-size:.78rem;padding:6px 10px;border-radius:8px;border:1px solid var(--border);color:var(--muted);transition:.25s}
+.stage.run{border-color:var(--warn);color:var(--warn)}
+.stage.pass{border-color:var(--ok);color:var(--ok)}
+.stage.fail{border-color:#ef4444;color:#ef4444}
+.out{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem;height:260px;overflow:auto;padding:14px;color:#c9d4ee;white-space:pre-wrap}
+.out .ok{color:var(--ok)} .out .warn{color:var(--warn)} .out .bad{color:#ef4444} .out .dim{color:var(--muted)}
+.term-actions{display:flex;flex-wrap:wrap;gap:10px;padding:14px;border-top:1px solid var(--border)}
+.term-actions .btn{padding:8px 14px;font-size:.84rem}
+/* skills */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;transition:.25s}
+.card:hover{border-color:rgba(0,180,255,.5);transform:translateY(-3px)}
+.card h3{font-size:1.02rem;margin-bottom:2px}
+.card .cap{color:var(--muted);font-size:.82rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:.76rem;padding:4px 10px;border-radius:99px;background:rgba(0,180,255,.1);border:1px solid rgba(0,180,255,.22);color:#bfe9ff}
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.filters button{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 14px;border-radius:99px;cursor:pointer;font-size:.86rem}
+.filters button.on{color:#fff;border-color:var(--accent);background:rgba(0,180,255,.15)}
+.proj{display:flex;flex-direction:column;gap:10px}
+.proj .top{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.kicker{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.proj h3{font-size:1.08rem}
+.proj p{color:var(--muted);font-size:.92rem}
+.proj ul{padding-left:18px;color:var(--muted);font-size:.88rem}
+.proj li{margin:4px 0}
+.proj .foot{margin-top:auto;padding-top:8px}
+.note{font-size:.8rem;color:var(--muted);margin-top:18px}
+/* timeline */
+.tl{position:relative;padding-left:26px;border-left:2px solid var(--border)}
+.job{position:relative;margin-bottom:30px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+.job::before{content:"";position:absolute;left:-35px;top:28px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(0,180,255,.18)}
+.job .head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;margin-bottom:8px}
+.job h3{font-size:1.1rem}
+.job .org{color:var(--accent);font-weight:600}
+.job .when{color:var(--muted);font-size:.86rem;text-align:right}
+.job ul{padding-left:18px;color:var(--muted);font-size:.92rem}
+.job li{margin:6px 0}
+.job li b{color:var(--text)}
+.earlier{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:12px}
+.earlier th,.earlier td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border)}
+.earlier th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+.earlier td:last-child{color:var(--muted);white-space:nowrap}
+/* education */
+.edu{display:flex;gap:16px;align-items:center}
+.edu .ic{font-size:1.8rem}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:30px}
+.ci{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border)}
+.ci:last-child{border:none}
+.ci .ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(0,180,255,.12);font-size:1.1rem}
+.ci small{display:block;color:var(--muted);font-size:.78rem}
+form{display:grid;gap:14px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+label{font-size:.82rem;color:var(--muted);display:grid;gap:6px}
+input,select,textarea{width:100%;background:#0a0f20;border:1px solid var(--border);color:var(--text);padding:11px 12px;border-radius:10px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:120px;resize:vertical}
+footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:.86rem;text-align:center}
+.reveal{opacity:0;transform:translateY(18px);transition:.6s}
+.reveal.in{opacity:1;transform:none}
+/* responsive */
+@media(max-width:900px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .grid3{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--bg2);padding:18px 20px;border-bottom:1px solid var(--border)}
+  .links.open{display:flex}
+  .job .when{text-align:left}
+  .earlier td:last-child{white-space:normal}
+}
+@media print{nav,.term,form,.filters{display:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#hero">Shashank&nbsp;Singh <span>DEVOPS</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#pipeline">CI/CD Pipeline</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a class="btn primary" href="#contact">Hire Me</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="badge"><span class="dot"></span> Open to Senior / Lead DevOps &amp; DevSecOps roles</span>
+        <h1>Building <span class="grad">secure, automated</span> cloud infrastructure on Azure</h1>
+        <div class="role" id="typed">Senior DevOps Engineer</div>
+        <p class="lead">Senior DevOps / DevSecOps Engineer with <b>6+ years of hands-on DevOps</b> experience (14+ years total in IT and telecom). I architect Azure infrastructure with <b>Terraform</b> and <b>AKS</b>, ship it through <b>GitHub Actions / Azure DevOps</b> pipelines, and make security scanning a mandatory pipeline gate.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#pipeline">Interactive Pipeline</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+        <div class="contact-mini">
+          <span>📍 Delhi, India</span>
+          <a href="mailto:shashank021988@gmail.com">✉️ shashank021988@gmail.com</a>
+          <a href="https://www.linkedin.com/in/shashank-singh-0aa0163b6/" target="_blank" rel="noopener">in LinkedIn</a>
+          <a href="https://github.com/shashank021988" target="_blank" rel="noopener">⌥ GitHub</a>
+        </div>
+      </div>
+      <aside class="profile">
+        <div class="avatar">SS</div>
+        <h3>Shashank Singh</h3>
+        <div class="tag">Senior DevOps Engineer · Mavenir</div>
+        <div class="facts">
+          <div>Primary cloud <b>Microsoft Azure</b></div>
+          <div>IaC &amp; GitOps <b>Terraform · AKS · Argo CD</b></div>
+          <div>CI/CD <b>GitHub Actions · Azure DevOps</b></div>
+          <div>Security gates <b>TFLint · tfsec · Checkov</b></div>
+          <div>Education <b>B.Tech, ECE (2011)</b></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">14+</div><div class="l">Years total experience</div></div>
+      <div class="stat"><div class="n">6+</div><div class="l">Years DevOps &amp; Cloud</div></div>
+      <div class="stat"><div class="n">10+</div><div class="l">Teams on shared Terraform modules</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Security scanners as hard pipeline gates</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap reveal">
+    <div class="eyebrow">About</div>
+    <h2>From systems &amp; networks to cloud-native DevSecOps</h2>
+    <p class="sub">I moved from systems, network and basic cloud administration into full-time Cloud and DevOps engineering in 2019, and I bridge engineering velocity with governance, security and operational stability.</p>
+    <div class="about-grid">
+      <div>
+        <p>I design <b>secure, highly automated infrastructure on Microsoft Azure</b> using <b>Terraform</b>, <b>Kubernetes (AKS)</b> and <b>GitHub Actions / Azure DevOps</b>. At <b>Mavenir</b> I built a centralized, versioned <b>Terraform module library</b> that 10+ project teams use to provision standardised infrastructure without duplicating code.</p>
+        <p>I embed <b>DevSecOps</b> into delivery: <b>TFLint, tfsec and Checkov</b> run as mandatory pipeline gates, so misconfigurations, exposed secrets and policy violations are caught before anything reaches an environment. Azure RBAC and Azure Policy provide the governance guardrails.</p>
+        <p>I am also exploring <b>Agentic AI / LLM-based automation</b> (MCP, RAG) to prototype natural-language-driven DevSecOps tooling for pipeline and infrastructure tasks.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><b>☁️ Cloud &amp; IaC</b><span>Modular Terraform, remote state, drift detection, landing zone design.</span></div>
+        <div class="pillar"><b>🛡️ DevSecOps</b><span>Shift-left scanning, Azure Policy, RBAC and branch protection.</span></div>
+        <div class="pillar"><b>☸️ Containers &amp; GitOps</b><span>AKS, Docker, Helm, Argo CD.</span></div>
+        <div class="pillar"><b>📊 Reliability</b><span>Azure Monitor, Log Analytics, on-call, RCA and post-mortems.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE DEMO -->
+<section id="pipeline">
+  <div class="wrap reveal">
+    <div class="eyebrow">Interactive Showcase</div>
+    <h2>DevSecOps pipeline, run it yourself</h2>
+    <p class="sub">A simulated version of the gated Terraform pipeline I run on Azure. Click <b>Run Full Pipeline</b>, or inject a failing scan to see a gate block a bad change.</p>
+    <div class="term">
+      <div class="term-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i>&nbsp; devops@shashank-ops: ~/terraform-azure-pipeline</div>
+      <div class="stages" id="stages">
+        <span class="stage" data-s="0">1. fmt &amp; validate</span>
+        <span class="stage" data-s="1">2. TFLint</span>
+        <span class="stage" data-s="2">3. tfsec</span>
+        <span class="stage" data-s="3">4. Checkov</span>
+        <span class="stage" data-s="4">5. SonarQube</span>
+        <span class="stage" data-s="5">6. terraform plan</span>
+        <span class="stage" data-s="6">7. Approval gate</span>
+        <span class="stage" data-s="7">8. apply &amp; AKS deploy</span>
+      </div>
+      <div class="out" id="out"><span class="dim">$ Pipeline idle. Press "Run Full Pipeline" to start.</span></div>
+      <div class="term-actions">
+        <button class="btn primary" id="runBtn">▶ Run Full Pipeline</button>
+        <button class="btn" id="failBtn">⚠ Run with insecure change</button>
+        <button class="btn" id="clearBtn">Clear</button>
+      </div>
+    </div>
+    <p class="note">Simulation for demonstration. It does not connect to any real cloud account.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap reveal">
+    <div class="eyebrow">Technical Core</div>
+    <h2>DevOps &amp; cloud engineering stack</h2>
+    <p class="sub">Tools I use day to day to build, secure and operate production infrastructure.</p>
+    <div class="grid3">
+      <div class="card"><h3>Cloud: Azure</h3><div class="cap">Primary platform</div><div class="chips"><span class="chip">AKS</span><span class="chip">VMs</span><span class="chip">VNet</span><span class="chip">NSG</span><span class="chip">Key Vault</span><span class="chip">Storage Accounts</span><span class="chip">Load Balancers</span><span class="chip">Azure Policy</span><span class="chip">RBAC</span><span class="chip">Azure Monitor</span><span class="chip">Log Analytics</span><span class="chip">App Insights</span></div></div>
+      <div class="card"><h3>Infrastructure as Code</h3><div class="cap">Repeatable &amp; modular</div><div class="chips"><span class="chip">Terraform</span><span class="chip">Modules</span><span class="chip">Workspaces</span><span class="chip">Remote State</span><span class="chip">Drift Detection</span><span class="chip">ARM Templates</span><span class="chip">Landing Zone HLD/LLD</span></div></div>
+      <div class="card"><h3>CI/CD &amp; Automation</h3><div class="cap">Delivery pipelines</div><div class="chips"><span class="chip">Azure DevOps</span><span class="chip">Pipelines</span><span class="chip">Repos</span><span class="chip">Boards</span><span class="chip">Artifacts</span><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">Ansible</span></div></div>
+      <div class="card"><h3>DevSecOps &amp; Security</h3><div class="cap">Shift-left</div><div class="chips"><span class="chip">TFLint</span><span class="chip">tfsec</span><span class="chip">Checkov</span><span class="chip">SonarQube</span><span class="chip">Trivy</span><span class="chip">OWASP</span><span class="chip">Azure Policy</span><span class="chip">RBAC</span></div></div>
+      <div class="card"><h3>Containers &amp; GitOps</h3><div class="cap">Orchestration</div><div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">AKS</span><span class="chip">Argo CD</span><span class="chip">Helm</span><span class="chip">GitOps</span></div></div>
+      <div class="card"><h3>Version Control</h3><div class="cap">Git workflows</div><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">GitFlow</span><span class="chip">Trunk-Based</span><span class="chip">Branch Protection</span><span class="chip">Signed Commits</span><span class="chip">PR Workflows</span></div></div>
+      <div class="card"><h3>Monitoring &amp; Observability</h3><div class="cap">Telemetry</div><div class="chips"><span class="chip">Azure Monitor</span><span class="chip">Log Analytics</span><span class="chip">Grafana</span><span class="chip">Prometheus</span><span class="chip">App Insights</span></div></div>
+      <div class="card"><h3>Scripting</h3><div class="cap">Automation</div><div class="chips"><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">PowerShell</span></div></div>
+      <div class="card"><h3>Emerging / AI Exposure</h3><div class="cap">Exploratory</div><div class="chips"><span class="chip">Agentic AI</span><span class="chip">LLM automation</span><span class="chip">MCP</span><span class="chip">RAG</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap reveal">
+    <div class="eyebrow">Real-World Impact</div>
+    <h2>Featured projects</h2>
+    <p class="sub">Production work from my current role, plus personal reference projects published on GitHub.</p>
+    <div class="filters" id="filters">
+      <button class="on" data-f="all">All</button>
+      <button data-f="iac">Terraform &amp; IaC</button>
+      <button data-f="sec">DevSecOps</button>
+      <button data-f="k8s">AKS &amp; GitOps</button>
+      <button data-f="ai">Agentic AI</button>
+    </div>
+    <div class="grid3" id="projGrid">
+
+      <div class="card proj" data-c="iac">
+        <div class="top"><span class="kicker">Production · Mavenir</span></div>
+        <h3>Centralized Terraform Module Library</h3>
+        <p>A versioned, reusable module library that lets teams provision standard Azure infrastructure without copying code.</p>
+        <ul><li>Adopted by 10+ project teams</li><li>Covers AKS, VMs, VNets, NSGs, Key Vaults, Storage</li><li>Prod, staging and dev environments</li></ul>
+        <div class="chips"><span class="chip">Terraform</span><span class="chip">Azure</span><span class="chip">Modules</span></div>
+      </div>
+
+      <div class="card proj" data-c="sec">
+        <div class="top"><span class="kicker">Production · Mavenir</span></div>
+        <h3>DevSecOps Pipeline Gates</h3>
+        <p>Multi-stage CI/CD with security scanning enforced as hard gates, plus environment approvals and rollback strategies.</p>
+        <ul><li>TFLint, tfsec and Checkov block misconfigurations early</li><li>Azure DevOps and GitHub Actions pipelines</li><li>Automated artifact versioning</li></ul>
+        <div class="chips"><span class="chip">Checkov</span><span class="chip">tfsec</span><span class="chip">GitHub Actions</span></div>
+      </div>
+
+      <div class="card proj" data-c="sec iac">
+        <div class="top"><span class="kicker">Production · Mavenir</span></div>
+        <h3>Azure Governance &amp; Guardrails</h3>
+        <p>Azure RBAC, Azure Policy initiatives and subscription-level guardrails keeping resources compliant with internal and regulatory standards.</p>
+        <ul><li>Least-privilege role design</li><li>Policy initiatives at subscription level</li></ul>
+        <div class="chips"><span class="chip">Azure Policy</span><span class="chip">RBAC</span></div>
+      </div>
+
+      <div class="card proj" data-c="iac sec">
+        <div class="top"><span class="kicker">GitHub · Reference project</span></div>
+        <h3>azure-enterprise-landing-zones</h3>
+        <p>Terraform framework for Azure Cloud Adoption Framework landing zones with hub-and-spoke networking and Azure Policy guardrails.</p>
+        <div class="chips"><span class="chip">Terraform</span><span class="chip">CAF</span><span class="chip">Hub-and-Spoke</span></div>
+        <div class="foot"><a href="https://github.com/shashank021988/azure-enterprise-landing-zones" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </div>
+
+      <div class="card proj" data-c="k8s sec">
+        <div class="top"><span class="kicker">GitHub · Reference project</span></div>
+        <h3>zero-trust-kubernetes-gitops</h3>
+        <p>Hardened AKS/EKS deployment driven by Argo CD GitOps, with network policies, secrets management and image scanning.</p>
+        <div class="chips"><span class="chip">AKS</span><span class="chip">Argo CD</span><span class="chip">Trivy</span></div>
+        <div class="foot"><a href="https://github.com/shashank021988/zero-trust-kubernetes-gitops" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </div>
+
+      <div class="card proj" data-c="ai">
+        <div class="top"><span class="kicker">GitHub · Exploratory</span></div>
+        <h3>agentic-devsecops-copilot</h3>
+        <p>Prototype multi-agent incident-response assistant using Model Context Protocol and LangGraph for DevSecOps tasks.</p>
+        <div class="chips"><span class="chip">MCP</span><span class="chip">LangGraph</span><span class="chip">Python</span></div>
+        <div class="foot"><a href="https://github.com/shashank021988/agentic-devsecops-copilot" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </div>
+
+      <div class="card proj" data-c="iac ai">
+        <div class="top"><span class="kicker">GitHub · Reference project</span></div>
+        <h3>cloud-finops-sentinel</h3>
+        <p>Serverless cost-governance bot that finds idle and orphaned cloud resources and enforces budget checks on pull requests.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">FinOps</span><span class="chip">Infracost</span></div>
+        <div class="foot"><a href="https://github.com/shashank021988/cloud-finops-sentinel" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </div>
+    </div>
+    <p class="note">GitHub projects are personal lab and reference implementations, not client systems.</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap reveal">
+    <div class="eyebrow">Track Record</div>
+    <h2>Professional experience</h2>
+    <p class="sub">Progression from telecom and systems administration into enterprise cloud and DevOps engineering.</p>
+    <div class="tl">
+      <div class="job">
+        <div class="head"><div><h3>Senior DevOps Engineer</h3><div class="org">Mavenir</div></div><div class="when">Apr 2023 – Present<br>Delhi, India · On-site</div></div>
+        <ul>
+          <li><b>Architected</b> end-to-end Azure infrastructure with <b>Terraform</b>: AKS clusters, VMs, VNets, NSGs, Key Vaults and Storage Accounts across production, staging and development.</li>
+          <li><b>Engineered</b> multi-stage CI/CD pipelines in <b>Azure DevOps</b> and <b>GitHub Actions</b> with approval gates, rollback strategies and automated artifact versioning.</li>
+          <li><b>Championed DevSecOps</b> by making <b>TFLint, tfsec and Checkov</b> hard pipeline gates, catching misconfigurations and exposed secrets before deployment.</li>
+          <li>Designed and enforced <b>Azure RBAC</b>, <b>Azure Policy</b> initiatives and subscription-level governance guardrails.</li>
+          <li>Built and own a centralized, versioned <b>Terraform module library</b> used by 10+ project teams.</li>
+          <li>Managed Git strategy (GitFlow / trunk-based), branch protection, mandatory peer review and automated status checks across product squads.</li>
+          <li>Configured <b>Azure Monitor</b> workbooks, <b>Log Analytics</b> dashboards and alert rules for proactive detection, reducing MTTR.</li>
+          <li>Led on-call incident response, root-cause analysis and post-mortem documentation.</li>
+          <li>Explored <b>Agentic AI / LLM-based automation</b> (MCP, RAG) for natural-language DevSecOps tooling.</li>
+        </ul>
+        <div class="chips" style="margin-top:12px"><span class="chip">Terraform</span><span class="chip">Azure</span><span class="chip">AKS</span><span class="chip">Azure DevOps</span><span class="chip">GitHub Actions</span><span class="chip">Checkov</span><span class="chip">tfsec</span></div>
+      </div>
+
+      <div class="job">
+        <div class="head"><div><h3>DevOps Engineer</h3><div class="org">Reliance Jio</div></div><div class="when">Oct 2019 – Mar 2023<br>Pune, India · Hybrid</div></div>
+        <ul>
+          <li>Designed and maintained <b>CI/CD pipelines</b> on <b>Azure DevOps</b> for large-scale deployments across hybrid cloud and on-premise data centres.</li>
+          <li>Automated provisioning and configuration with <b>Terraform</b>, <b>Bash</b> and <b>Python</b>, removing hours of manual work per sprint.</li>
+          <li>Managed Azure subscriptions, resource groups, VNet peering, NSGs and identity/access controls with network and platform teams.</li>
+          <li>Introduced <b>shift-left security</b> with static analysis and vulnerability scanning in CI, partnering with InfoSec on cloud security baselines.</li>
+          <li>Built observability with <b>Azure Monitor</b> and <b>Log Analytics</b>, including dashboards and alert runbooks.</li>
+          <li>Promoted Git best practices (branching models, PR templates, review checklists) and wrote runbooks, post-mortem templates and onboarding docs.</li>
+        </ul>
+        <div class="chips" style="margin-top:12px"><span class="chip">Azure DevOps</span><span class="chip">Terraform</span><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">Azure Monitor</span></div>
+      </div>
+
+      <div class="job">
+        <div class="head"><div><h3>Earlier career: Systems, Network &amp; Telecom Engineering</h3><div class="org">2011 – 2019</div></div><div class="when">Foundation for the move into Cloud &amp; DevOps</div></div>
+        <table class="earlier">
+          <thead><tr><th>Role</th><th>Organization</th><th>Period</th></tr></thead>
+          <tbody>
+            <tr><td>RF Planning Engineer</td><td>Reliance Jio, Pune</td><td>Sep 2015 – Sep 2019</td></tr>
+            <tr><td>Network Engineer</td><td>Adacell Technologies Pvt. Ltd., Gurugram</td><td>Dec 2014 – Sep 2015</td></tr>
+            <tr><td>System Administrator</td><td>Indian Telephone Industries (Govt. of India), Bihar</td><td>Feb 2013 – Apr 2014</td></tr>
+            <tr><td>DST Engineer</td><td>Indus Towers Limited, Lucknow</td><td>Oct 2011 – Oct 2012</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap reveal">
+    <div class="eyebrow">Education</div>
+    <h2>Academic background</h2>
+    <div class="card edu" style="max-width:620px;margin-top:20px">
+      <div class="ic">🎓</div>
+      <div><h3>Bachelor of Technology: Electronics &amp; Communication Engineering</h3><div class="cap" style="margin:0">Lucknow, Uttar Pradesh · 2011</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap reveal">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Let's build resilient infrastructure together</h2>
+    <p class="sub">Looking for a Senior DevOps / DevSecOps engineer, Terraform modules, or a secure Azure and AKS delivery pipeline? Send a message.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="ci"><div class="ic">✉️</div><div><small>Email</small><a href="mailto:shashank021988@gmail.com">shashank021988@gmail.com</a></div></div>
+        <div class="ci"><div class="ic">📞</div><div><small>Phone</small><a href="tel:+917020087011">+91 70200 87011</a></div></div>
+        <div class="ci"><div class="ic">in</div><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/shashank-singh-0aa0163b6/" target="_blank" rel="noopener">linkedin.com/in/shashank-singh-0aa0163b6</a></div></div>
+        <div class="ci"><div class="ic">⌥</div><div><small>GitHub</small><a href="https://github.com/shashank021988" target="_blank" rel="noopener">github.com/shashank021988</a></div></div>
+        <div class="ci"><div class="ic">📍</div><div><small>Location</small>Delhi, India</div></div>
+      </div>
+      <form id="contactForm">
+        <label>Your name / organization *<input name="name" required></label>
+        <label>Your email *<input type="email" name="email" required></label>
+        <label>Opportunity type
+          <select name="type">
+            <option>Senior / Lead DevOps Engineer role</option>
+            <option>DevSecOps / Terraform opportunity</option>
+            <option>Kubernetes &amp; GitOps consultation</option>
+            <option>General inquiry</option>
+          </select>
+        </label>
+        <label>Message *<textarea name="msg" required></textarea></label>
+        <button class="btn primary" type="submit">Send inquiry</button>
+        <small style="color:var(--muted)">Opens your email app with the message pre-filled.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 <b>Shashank Singh</b> · Senior DevOps &amp; DevSecOps Engineer · Built with semantic HTML, CSS and vanilla JavaScript.</div>
+</footer>
+
+<script>
+// mobile menu
+const links=document.getElementById('links');
+document.getElementById('menuBtn').onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+// typed role rotation
+const roles=['Senior DevOps Engineer','DevSecOps & Cloud Automation','Azure · Terraform · Kubernetes'];
+let ri=0,ci=0,del=false;const typed=document.getElementById('typed');
+(function tick(){
+  const w=roles[ri];
+  typed.textContent=w.slice(0,ci)+'▌';
+  if(!del&&ci<w.length){ci++;setTimeout(tick,70)}
+  else if(!del){del=true;setTimeout(tick,1500)}
+  else if(ci>0){ci--;setTimeout(tick,35)}
+  else{del=false;ri=(ri+1)%roles.length;setTimeout(tick,300)}
+})();
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// project filter
+document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const f=b.dataset.f;
+  document.querySelectorAll('#projGrid .proj').forEach(c=>{
+    c.style.display=(f==='all'||c.dataset.c.split(' ').includes(f))?'':'none';
+  });
+});
+
+// pipeline simulation
+const out=document.getElementById('out'),stageEls=[...document.querySelectorAll('.stage')];
+let running=false;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function log(t,c){const s=document.createElement('span');if(c)s.className=c;s.textContent=t+'\n';out.appendChild(s);out.scrollTop=out.scrollHeight}
+function reset(){stageEls.forEach(s=>s.className='stage');out.innerHTML=''}
+async function run(insecure){
+  if(running)return;running=true;reset();
+  document.getElementById('runBtn').disabled=document.getElementById('failBtn').disabled=true;
+  const steps=[
+    {n:'terraform fmt -check && terraform validate',ok:'Success! The configuration is valid.'},
+    {n:'tflint --recursive',ok:'No issues found.'},
+    {n:'tfsec .',ok:'No problems detected.',bad:'Result #1 HIGH  Storage account allows public blob access\n  azurerm_storage_account.logs  (allow_nested_items_to_be_public = true)'},
+    {n:'checkov -d . --framework terraform',ok:'Passed checks: 64, Failed checks: 0',bad:'Failed checks: 1\n  CKV_AZURE_59: Ensure storage account disables public network access'},
+    {n:'sonar-scanner (quality gate)',ok:'Quality Gate: PASSED'},
+    {n:'terraform plan -out=tfplan',ok:'Plan: 6 to add, 0 to change, 0 to destroy.'},
+    {n:'Waiting for environment approval (production)',ok:'Approved by release manager.'},
+    {n:'terraform apply tfplan && argocd app sync aks-platform',ok:'Apply complete. Argo CD app Synced / Healthy.'}
+  ];
+  for(let i=0;i<steps.length;i++){
+    stageEls[i].classList.add('run');
+    log('$ '+steps[i].n,'dim');await sleep(700);
+    if(insecure&&steps[i].bad){
+      stageEls[i].className='stage fail';log(steps[i].bad,'bad');
+      log('\n✖ Gate failed at stage '+(i+1)+'. Change blocked. Nothing was deployed.','bad');
+      running=false;document.getElementById('runBtn').disabled=document.getElementById('failBtn').disabled=false;return;
+    }
+    stageEls[i].className='stage pass';log('✔ '+steps[i].ok,'ok');await sleep(250);
+  }
+  log('\n✔ Pipeline complete. All security gates passed.','ok');
+  running=false;document.getElementById('runBtn').disabled=document.getElementById('failBtn').disabled=false;
+}
+document.getElementById('runBtn').onclick=()=>run(false);
+document.getElementById('failBtn').onclick=()=>run(true);
+document.getElementById('clearBtn').onclick=()=>{if(!running){reset();log('$ Pipeline idle.','dim')}};
+
+// contact form -> mailto
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const subj=encodeURIComponent('Portfolio inquiry: '+f.get('type'));
+  const body=encodeURIComponent('From: '+f.get('name')+' ('+f.get('email')+')\n\n'+f.get('msg'));
+  location.href='mailto:shashank021988@gmail.com?subject='+subj+'&body='+body;
+});
+</script>
+</body>
+</html>
